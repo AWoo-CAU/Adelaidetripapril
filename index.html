@@ -1,312 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            color: #2d3748;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 { color: #0284c7; }
+        button {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover { background-color: #0369a1; }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Adelaide to Victor Harbor: Coastal Escape Infographic&lt;/title&gt;</p>
-<p class="p1">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;!-- Chosen Palette: Vibrant Marine &amp; Coral --&gt;</p>
-<p class="p1">&lt;!-- Application Structure Plan: A linear storytelling format mimicking the flow of the day trip. Starts with a high-level overview of time allocation using a chart, moves into a visual timeline of the itinerary, highlights key destinations with metric cards, and concludes with practical traveller tips. This allows users to grasp the pacing of the trip first, then dive into the chronological details. --&gt;</p>
-<p class="p1">&lt;!-- Visualization &amp; Content Choices: 1. Time Allocation -&gt; Goal: Compare -&gt; Viz: Donut Chart -&gt; Interaction: Tooltip hover -&gt; Justification: Shows the proportion of time spent active vs relaxing vs traveling. Chart.js (NO SVG). 2. Itinerary -&gt; Goal: Organize/Change -&gt; Viz: Vertical Timeline -&gt; Justification: Clearly displays the sequence of events. HTML/CSS (NO SVG). 3. Key Metrics -&gt; Goal: Inform -&gt; Viz: Big Number Cards -&gt; Justification: Makes crucial distances and times stand out. HTML/CSS (NO SVG). --&gt;</p>
-<p class="p1">&lt;!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">body { font-family: 'Open Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }</p>
-<p class="p1">h1, h2, h3, .title-font { font-family: 'Montserrat', sans-serif; }</p>
-<p class="p1">.chart-container { position: relative; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto; height: 320px; max-height: 400px; }</p>
-<p class="p1">@media (min-width: 768px) { .chart-container { height: 380px; } }</p>
-<p class="p1">.timeline-dot { width: 16px; height: 16px; border-radius: 50%; background-color: #f97316; border: 4px solid #fff; box-shadow: 0 0 0 2px #f97316; }</p>
-<p class="p1">.timeline-line { width: 4px; background-color: #e2e8f0; position: absolute; top: 16px; bottom: -32px; left: 6px; z-index: -1; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="antialiased pb-20"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;header class="bg-gradient-to-r from-[#0284c7] to-[#0f766e] text-white py-20 px-6 shadow-lg relative overflow-hidden"&gt;</p>
-<p class="p1">&lt;div class="max-w-5xl mx-auto relative z-10 text-center"&gt;</p>
-<p class="p1">&lt;p class="text-amber-400 font-bold tracking-widest uppercase mb-2"&gt;A Saturday Itinerary&lt;/p&gt;</p>
-<p class="p1">&lt;h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight"&gt;Adelaide to Victor Harbor&lt;/h1&gt;</p>
-<p class="p1">&lt;p class="text-xl md:text-2xl font-light text-blue-100 max-w-3xl mx-auto"&gt;A breathtaking coastal escape designed for hikers and food lovers. Swap the city for granite formations, local produce, and the Southern Ocean breeze.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="absolute inset-0 opacity-10 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2rVq1X8GBgYQBxXnBAgwAF+tBDPy6U0aAAAAAElFTkSuQmCC')]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;main class="max-w-5xl mx-auto px-6 mt-12 space-y-20"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="bg-white rounded-2xl shadow-md p-8 md:p-12 border-t-4 border-[#f97316]"&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-bold text-[#0f766e] mb-4 title-font"&gt;Day Trip Composition&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-lg text-slate-600 mb-8 leading-relaxed"&gt;</p>
-<p class="p1">Understanding how your time is divided is essential for a smooth day trip. This breakdown illustrates the balance between transit, physical activity, and leisure dining throughout your 12-hour excursion down the Fleurieu Peninsula.</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p1">&lt;div class="flex flex-col md:flex-row items-center justify-between gap-8"&gt;</p>
-<p class="p1">&lt;div class="w-full md:w-1/2"&gt;</p>
-<p class="p1">&lt;ul class="space-y-6"&gt;</p>
-<p class="p1">&lt;li class="flex items-start"&gt;</p>
-<p class="p1">&lt;div class="w-6 h-6 rounded bg-[#0284c7] mr-4 mt-1 flex-shrink-0"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-bold text-lg text-slate-800"&gt;Scenic Travel&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Approximately 2.5 hours driving through rolling hills and coastal roads.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/li&gt;</p>
-<p class="p1">&lt;li class="flex items-start"&gt;</p>
-<p class="p1">&lt;div class="w-6 h-6 rounded bg-[#0f766e] mr-4 mt-1 flex-shrink-0"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-bold text-lg text-slate-800"&gt;Coastal Exploration&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Over 3.5 hours dedicated to the Kaiki Walk and ascending The Bluff.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/li&gt;</p>
-<p class="p1">&lt;li class="flex items-start"&gt;</p>
-<p class="p1">&lt;div class="w-6 h-6 rounded bg-[#f97316] mr-4 mt-1 flex-shrink-0"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-bold text-lg text-slate-800"&gt;Dining &amp; Relaxation&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Around 3 hours savouring fresh local brunch and wood-fired dinners.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/li&gt;</p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="w-full md:w-1/2 flex justify-center"&gt;</p>
-<p class="p1">&lt;div class="chart-container"&gt;</p>
-<p class="p1">&lt;canvas id="timeAllocationChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-bold text-[#0284c7] mb-4 title-font"&gt;The Journey Flow&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-3xl"&gt;</p>
-<p class="p1">Follow the timeline below to see how your Saturday will unfold. From your morning departure in Adelaide to your twilight return, every stop is planned to maximize your coastal experience without feeling rushed.</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative pl-4 md:pl-8 max-w-3xl mx-auto space-y-12"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative z-10 flex flex-col md:flex-row gap-6"&gt;</p>
-<p class="p1">&lt;div class="timeline-line hidden md:block"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="mt-2 relative z-20 hidden md:block"&gt;</p>
-<p class="p1">&lt;div class="timeline-dot"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="text-[#f97316] font-bold text-sm tracking-wider uppercase mb-1"&gt;8:30 AM&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-2 title-font"&gt;Departure from Adelaide CBD&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Collect your rental car and head south on the A13. The drive takes about 70 minutes and winds through the scenic rolling hills of the Fleurieu Peninsula.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative z-10 flex flex-col md:flex-row gap-6"&gt;</p>
-<p class="p1">&lt;div class="timeline-line hidden md:block"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="mt-2 relative z-20 hidden md:block"&gt;</p>
-<p class="p1">&lt;div class="timeline-dot bg-[#0284c7] border-[#0284c7] box-shadow-none shadow-[0_0_0_2px_#0284c7]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="text-[#0284c7] font-bold text-sm tracking-wider uppercase mb-1"&gt;10:00 AM &amp;ndash; 11:00 AM&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-2 title-font"&gt;Granite Island &amp; The Kaiki Walk&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600 mb-4"&gt;Park near Warland Reserve, then walk the 600m wooden causeway. Keep an eye out for dolphins! Once across, embark on the 3.3km Kaiki Walk loop.&lt;/p&gt;</p>
-<p class="p1">&lt;div class="bg-slate-50 p-4 rounded-lg"&gt;</p>
-<p class="p1">&lt;ul class="list-disc pl-5 text-slate-700 space-y-1"&gt;</p>
-<p class="p1">&lt;li&gt;&lt;strong&gt;Umbrella Rock:&lt;/strong&gt; Natural granite formation for photos.&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;strong&gt;Southern Ocean Views:&lt;/strong&gt; Look out for New Zealand Fur Seals.&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;strong&gt;Difficulty:&lt;/strong&gt; Easy/Moderate with undulating terrain.&lt;/li&gt;</p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative z-10 flex flex-col md:flex-row gap-6"&gt;</p>
-<p class="p1">&lt;div class="timeline-line hidden md:block"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="mt-2 relative z-20 hidden md:block"&gt;</p>
-<p class="p1">&lt;div class="timeline-dot bg-[#0f766e] border-[#0f766e] box-shadow-none shadow-[0_0_0_2px_#0f766e]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="text-[#0f766e] font-bold text-sm tracking-wider uppercase mb-1"&gt;1:00 PM&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-2 title-font"&gt;Lunch: Qahwa Espresso Bar&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Located on the Victor Harbor foreshore. Relaxed, sun-drenched vibe featuring hearty breakfast bowls, gourmet burgers, and on-site roasted coffee.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative z-10 flex flex-col md:flex-row gap-6"&gt;</p>
-<p class="p1">&lt;div class="timeline-line hidden md:block"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="mt-2 relative z-20 hidden md:block"&gt;</p>
-<p class="p1">&lt;div class="timeline-dot bg-[#fbbf24] border-[#fbbf24] box-shadow-none shadow-[0_0_0_2px_#fbbf24]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="text-[#d97706] font-bold text-sm tracking-wider uppercase mb-1"&gt;2:30 PM &amp;ndash; 4:00 PM&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-2 title-font"&gt;The Bluff &amp; Whale Centre&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600"&gt;Drive west to Encounter Bay. Hike to the top of The Bluff for dramatic panoramic views. Afterwards, visit the SA Whale Centre or enjoy a peaceful beach stroll.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="relative z-10 flex flex-col md:flex-row gap-6"&gt;</p>
-<p class="p1">&lt;div class="mt-2 relative z-20 hidden md:block"&gt;</p>
-<p class="p1">&lt;div class="timeline-dot bg-[#e11d48] border-[#e11d48] box-shadow-none shadow-[0_0_0_2px_#e11d48]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="text-[#e11d48] font-bold text-sm tracking-wider uppercase mb-1"&gt;6:00 PM &amp;ndash; 7:30 PM&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-2 title-font"&gt;Dinner: Nino's &amp; The Return&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600 mb-4"&gt;A local institution known for a bustling Italian family atmosphere, wood-fired pizzas, and fresh seafood. After dinner, enjoy a twilight drive, returning to the CBD by 8:45 PM.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="bg-[#0f766e] text-white rounded-2xl p-8 md:p-12 shadow-lg mt-16"&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-bold mb-4 title-font"&gt;Key Trip Metrics&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-teal-100 mb-10 text-lg"&gt;Quick numbers to keep in mind for your physical output and travel distance during the day.&lt;/p&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"&gt;</p>
-<p class="p1">&lt;div class="bg-teal-800/50 p-6 rounded-xl backdrop-blur-sm border border-teal-600"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-3"&gt;&amp;#128663;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-5xl font-bold text-amber-400 mb-2 title-font"&gt;70&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-sm font-semibold tracking-wide uppercase text-teal-100"&gt;Minutes Drive (One Way)&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-teal-800/50 p-6 rounded-xl backdrop-blur-sm border border-teal-600"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-3"&gt;&amp;#128094;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-5xl font-bold text-amber-400 mb-2 title-font"&gt;3.3&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-sm font-semibold tracking-wide uppercase text-teal-100"&gt;Km Kaiki Walk Loop&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-teal-800/50 p-6 rounded-xl backdrop-blur-sm border border-teal-600"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-3"&gt;&amp;#127961;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-5xl font-bold text-amber-400 mb-2 title-font"&gt;600&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-sm font-semibold tracking-wide uppercase text-teal-100"&gt;Meter Causeway Walk&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="mt-16 border-t border-slate-200 pt-16"&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-bold text-slate-800 mb-4 text-center title-font"&gt;Essential Traveller Tips&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-lg text-slate-600 mb-10 text-center max-w-2xl mx-auto"&gt;</p>
-<p class="p1">The Southern Ocean coastline is stunning but can be rugged. Keep these three core principles in mind to ensure a safe and comfortable experience.</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6"&gt;</p>
-<p class="p1">&lt;div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#0284c7] hover:-translate-y-1 transition-transform duration-300"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-4 text-center"&gt;&amp;#128094;&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-3 text-center"&gt;Footwear&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600 text-center leading-relaxed"&gt;Wear sturdy walking shoes for the Kaiki Walk and The Bluff. The terrain features granite boulders and dirt trails.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#0f766e] hover:-translate-y-1 transition-transform duration-300"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-4 text-center"&gt;&amp;#127788;&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-3 text-center"&gt;Weather&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600 text-center leading-relaxed"&gt;The Southern Ocean breeze can be brisk, dropping temperatures rapidly even on sunny days; bring a light windbreaker.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#f97316] hover:-translate-y-1 transition-transform duration-300"&gt;</p>
-<p class="p1">&lt;div class="text-4xl mb-4 text-center"&gt;&amp;#128039;&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-slate-800 mb-3 text-center"&gt;Wildlife&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-slate-600 text-center leading-relaxed"&gt;Please stay strictly on the marked paths on Granite Island to protect the fragile burrows of the Little Penguins.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer class="bg-slate-900 text-slate-400 py-8 text-center mt-20"&gt;</p>
-<p class="p1">&lt;p class="text-sm"&gt;Based on the "Adelaide to Victor Harbor: A Coastal Escape" Itinerary.&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">document.addEventListener('DOMContentLoaded', function() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const ctx = document.getElementById('timeAllocationChart').getContext('2d');</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const rawLabels = [</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"Scenic Travel",<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>"Coastal Exploration",<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>"Dining &amp; Relaxation",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"Transitions &amp; Stops"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>];</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const processedLabels = rawLabels.map(label =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (label.length &gt; 16) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const words = label.split(' ');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let lines = [];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let currentLine = words[0];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 1; i &lt; words.length; i++) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if ((currentLine + " " + words[i]).length &lt;= 16) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>currentLine += " " + words[i];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>lines.push(currentLine);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>currentLine = words[i];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>lines.push(currentLine);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return lines;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return label;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const data = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>labels: processedLabels,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: [2.5, 3.5, 3.0, 1.0],</p>
-<p class="p1"><span class="Apple-converted-space">            </span>backgroundColor: [</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'#0284c7',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>'#0f766e',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>'#f97316',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>'#fbbf24' <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>],</p>
-<p class="p1"><span class="Apple-converted-space">            </span>borderWidth: 0,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>hoverOffset: 8</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const config = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>type: 'doughnut',</p>
-<p class="p1"><span class="Apple-converted-space">        </span>data: data,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cutout: '60%',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>legend: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>position: 'bottom',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>labels: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>font: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>family: "'Open Sans', sans-serif",</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>size: 13</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>padding: 20</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>tooltip: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>callbacks: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: function(tooltipItems) {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>const item = tooltipItems[0];</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>let label = item.chart.data.labels[item.dataIndex];</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>if (Array.isArray(label)) {</p>
-<p class="p1"><span class="Apple-converted-space">                              </span>return label.join(' ');</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                              </span>return label;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: function(context) {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>return ' ' + context.parsed + ' Hours';</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(30, 41, 59, 0.95)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>titleFont: { size: 14, family: "'Montserrat', sans-serif" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>bodyFont: { size: 14, family: "'Open Sans', sans-serif" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>padding: 12,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>cornerRadius: 8</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>new Chart(ctx, config);</p>
-<p class="p1">});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="card">
+        <h1>Deployment Successful!</h1>
+        <p>If you can see this styled page, your GitHub Pages site is live.</p>
+        <button onclick="alert('JavaScript is also working!')">Test JavaScript</button>
+    </div>
 </body>
 </html>
